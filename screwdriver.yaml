@@ -1,0 +1,7 @@
+jobs:
+  create:
+    image: node:14
+    requires: [~pr, ~commit]
+    steps:
+      - html: wget https://en.wikipedia.org/wiki/Angkor_Wat -O $SD_ARTIFACTS_DIR/Angkor_Wat.html
+      - tgz: tar -czvf $SD_ARTIFACTS_DIR/file.tar.gz $SD_ARTIFACTS_DIR
