@@ -1,6 +1,6 @@
 jobs:
   create:
-    image: node:14
+    image: docker.ouroath.com:4443/docker.io/node:18
     requires: [~pr, ~commit]
     steps:
       - html: wget https://en.wikipedia.org/wiki/Angkor_Wat -O $SD_ARTIFACTS_DIR/Angkor_Wat.html
